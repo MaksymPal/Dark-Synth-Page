@@ -1,0 +1,277 @@
+$main: rgba(128, 19, 54, 0.6);
+$tranparent: rgba(0, 0, 0, 0.0);
+$red: rgb(255, 0, 0);
+$redMuted: rgb(180, 0, 0);
+$pink: rgb(255, 0, 234);
+$pinkMuted: rgb(211, 0, 193);
+$cyan: rgb(0, 255, 221);
+$green: rgb(38, 255, 0);
+$greenMuted: rgb(33, 221, 0);
+$orange: rgb(255, 157, 0);
+$orangeMuted: rgb(223, 138, 2);
+$white: rgb(255, 255, 255);
+$dark: rgb(45, 19, 44);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;  
+}
+
+// =====NAVBAR=====
+
+.navbar {
+    background: $main;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    .logo {
+        color: $red;
+        font-size: 1.75rem;
+        text-shadow: 0px 0px 5px $red;
+        padding: 2px 0px;
+        border: 2px solid rgba(255, 0, 0, 0);
+        transition-duration: 1s;
+    }
+    .logo:after {
+        display: block;
+        content: '';
+        border-bottom: 2px solid $red;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+    }
+    .logo:hover:after {
+        transform: scaleX(1);
+    }
+    .navbar-nav {
+        margin-left: auto;
+        li {
+            margin: 0 10px;
+            a {
+                color: rgb(206, 206, 206);
+                font-size: 1rem;
+                transition-property: all;
+                transition-duration: 0.3s;
+            }
+            a:hover {
+                text-shadow: 0px 0px 5px rgb(255, 255, 255);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+} 
+
+// =====SHOWCASE=====
+.showcase {
+
+    .carousel {
+        height: 500px;
+    }
+    .carousel-caption {
+        padding: 50px 100px;
+    }
+
+    .carousel-item {
+        height: 500px;
+    }
+
+    .carousel-item-1 {
+        background: url('../img/slide1.jpg');
+        background-size: cover;
+        background-position: 50% 100%;
+
+        .slide-heading {
+            color: $red;
+            text-shadow: 0px 0px 20px $red;
+        }
+
+        .btn {
+        transition: all 0.5s;
+        }
+        .btn:hover {
+        box-shadow: 0px 0px 10px $red, inset 0px 0px 10px $red;
+        text-shadow: 0px 0px 5px $red;
+        background: $tranparent;
+        border-color: $red;
+        color: $red;
+        }
+    }
+    .carousel-item-2 {
+        background: url('../img/slide2.jpg');
+        background-size: cover;
+        background-position: 50% 100%;
+        
+        .slide-heading {
+            color: $pink;
+            text-shadow: 0px 0px 20px $pink;
+        }
+
+        .btn {
+        transition: all 0.5s;
+        border-color: $pinkMuted;
+        color: $pinkMuted;
+        }
+        .btn:hover {
+        box-shadow: 0px 0px 10px $pink, inset 0px 0px 10px $pink;
+        text-shadow: 0px 0px 5px $pink;
+        background: $tranparent;
+        border-color: $pink;
+        color: $pink;
+        }
+    }
+    .carousel-item-3 {
+        background: url('../img/slide3.jpg');
+        background-size: cover;
+        background-position: 50% 100%;
+
+        .slide-heading {
+            color: rgb(0, 255, 221);
+            text-shadow: 0px 0px 20px rgb(0, 255, 221);
+        }
+
+        .btn {
+        transition: all 0.5s;
+        border-color: $cyan;
+        color: $cyan;
+        }
+        .btn:hover {
+        box-shadow: 0px 0px 10px $cyan, inset 0px 0px 10px $cyan;
+        text-shadow: 0px 0px 5px $cyan;
+        background: $tranparent;
+        border-color: $cyan;
+        color: $cyan;
+        }
+    }
+}
+
+// =====CHANNELS=====
+
+.channels {
+    background: $dark;
+    .channels-header {
+        width: 70%;
+        margin-bottom: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid $redMuted;
+    }
+    .card {
+        background: $main;
+        .card-body{
+            padding: 1rem;
+            img {
+                margin-top: -60px;
+                border: 2px solid transparent;
+                transition: all 0.3s;
+            }
+            img:hover {
+                border: 2px solid $red;
+                box-shadow: 0 0 5px $red;
+            }
+
+            i {
+                color: $white;
+            }
+        }
+    }   
+}
+
+// =====VIDEO=====
+
+.video {
+    .card {
+        background: $dark;
+        border-radius: 0px;
+        .card-header {
+            background: #111;
+        }
+        .card-body {
+            background: #111;
+        }
+    }
+}
+
+// =====CONTACT=====
+
+.contact {
+    position: relative;
+    background: url('../img/infoBack.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 392px;
+
+    .dark-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .input-group-text {
+        border: 1px solid $redMuted;
+    }
+
+    .form-control {
+        border: 1px solid $redMuted;
+    }
+
+    .contact-text {
+        font-size: 5rem;
+        color: $red;
+        text-shadow: 0 0 10px $red;
+    }
+
+    .social {
+        i {
+            color: $red;
+            font-size: 2rem;
+        }
+    }
+    
+  
+}
+
+// =====FOOTER=====
+
+.main-footer {
+    background: $dark;
+}
+
+
+
+
+// =====MEDIA=====
+
+@media (max-width: 992px) {
+    .channels {
+        .card {
+            margin-bottom: 3rem; 
+        }
+    }
+    .contact {
+        height: 627px;
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase {
+        .slide-heading {
+            font-size: 2rem;
+        }
+    }
+    .channels {
+        .card {
+            margin-bottom: 3rem; 
+        }
+    }
+}
