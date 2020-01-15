@@ -19,86 +19,86 @@ a:hover {
     padding: 2px 0px;
     border: 2px solid rgba(255, 0, 0, 0);
     transition-duration: 1s; }
-  .navbar .logo:after {
-    display: block;
-    content: '';
-    border-bottom: 2px solid red;
-    transform: scaleX(0);
-    transition: transform 0.3s; }
-  .navbar .logo:hover:after {
-    transform: scaleX(1); }
-  .navbar .navbar-nav {
+    .navbar .logo::after {
+      display: block;
+      content: '';
+      border-bottom: 2px solid red;
+      transform: scaleX(0);
+      transition: transform 0.3s; }
+    .navbar .logo:hover::after {
+      transform: scaleX(1); }
+  .navbar-nav {
     margin-left: auto; }
-    .navbar .navbar-nav li {
+    .navbar-nav li {
       margin: 0 10px; }
-      .navbar .navbar-nav li a {
+      .navbar-nav li a {
         color: #cecece;
         font-size: 1rem;
         transition-property: all;
         transition-duration: 0.3s; }
-      .navbar .navbar-nav li a:hover {
-        text-shadow: 0px 0px 5px white;
-        transform: scale(1.1); }
+        .navbar-nav li a:hover {
+          text-shadow: 0px 0px 5px white;
+          transform: scale(1.1); }
 
 .showcase .carousel {
   height: 500px; }
-.showcase .carousel-caption {
-  padding: 50px 100px; }
-.showcase .carousel-item {
-  height: 500px; }
-.showcase .carousel-item-1 {
-  background: url("../img/slide1.jpg");
-  background-size: cover;
-  background-position: 50% 100%; }
-  .showcase .carousel-item-1 .slide-heading {
-    color: red;
-    text-shadow: 0px 0px 20px red; }
-  .showcase .carousel-item-1 .btn {
-    transition: all 0.5s; }
-  .showcase .carousel-item-1 .btn:hover {
-    box-shadow: 0px 0px 10px red, inset 0px 0px 10px red;
-    text-shadow: 0px 0px 5px red;
-    background: rgba(0, 0, 0, 0);
-    border-color: red;
-    color: red; }
-.showcase .carousel-item-2 {
-  background: url("../img/slide2.jpg");
-  background-size: cover;
-  background-position: 50% 100%; }
-  .showcase .carousel-item-2 .slide-heading {
-    color: #ff00ea;
-    text-shadow: 0px 0px 20px #ff00ea; }
-  .showcase .carousel-item-2 .btn {
-    transition: all 0.5s;
-    border-color: #d300c1;
-    color: #d300c1; }
-  .showcase .carousel-item-2 .btn:hover {
-    box-shadow: 0px 0px 10px #ff00ea, inset 0px 0px 10px #ff00ea;
-    text-shadow: 0px 0px 5px #ff00ea;
-    background: rgba(0, 0, 0, 0);
-    border-color: #ff00ea;
-    color: #ff00ea; }
-.showcase .carousel-item-3 {
-  background: url("../img/slide3.jpg");
-  background-size: cover;
-  background-position: 50% 100%; }
-  .showcase .carousel-item-3 .slide-heading {
-    color: #00ffdd;
-    text-shadow: 0px 0px 20px #00ffdd; }
-  .showcase .carousel-item-3 .btn {
-    transition: all 0.5s;
-    border-color: #00ffdd;
-    color: #00ffdd; }
-  .showcase .carousel-item-3 .btn:hover {
-    box-shadow: 0px 0px 10px #00ffdd, inset 0px 0px 10px #00ffdd;
-    text-shadow: 0px 0px 5px #00ffdd;
-    background: rgba(0, 0, 0, 0);
-    border-color: #00ffdd;
-    color: #00ffdd; }
+  .showcase .carousel-caption {
+    padding: 50px 100px; }
+  .showcase .carousel-item {
+    height: 500px; }
+    .showcase .carousel-item-1 {
+      background: url("../img/slide1.jpg");
+      background-size: cover;
+      background-position: 50% 100%; }
+      .showcase .carousel-item-1 .slide-heading {
+        color: red;
+        text-shadow: 0px 0px 20px red; }
+      .showcase .carousel-item-1 .btn {
+        transition: all 0.5s; }
+        .showcase .carousel-item-1 .btn:hover {
+          box-shadow: 0px 0px 10px red, inset 0px 0px 10px red;
+          text-shadow: 0px 0px 5px red;
+          background: rgba(0, 0, 0, 0);
+          border-color: red;
+          color: red; }
+    .showcase .carousel-item-2 {
+      background: url("../img/slide2.jpg");
+      background-size: cover;
+      background-position: 50% 100%; }
+      .showcase .carousel-item-2 .slide-heading {
+        color: #ff00ea;
+        text-shadow: 0px 0px 20px #ff00ea; }
+      .showcase .carousel-item-2 .btn {
+        transition: all 0.5s;
+        border-color: #d300c1;
+        color: #d300c1; }
+        .showcase .carousel-item-2 .btn:hover {
+          box-shadow: 0px 0px 10px #ff00ea, inset 0px 0px 10px #ff00ea;
+          text-shadow: 0px 0px 5px #ff00ea;
+          background: rgba(0, 0, 0, 0);
+          border-color: #ff00ea;
+          color: #ff00ea; }
+    .showcase .carousel-item-3 {
+      background: url("../img/slide3.jpg");
+      background-size: cover;
+      background-position: 50% 100%; }
+      .showcase .carousel-item-3 .slide-heading {
+        color: #00ffdd;
+        text-shadow: 0px 0px 20px #00ffdd; }
+      .showcase .carousel-item-3 .btn {
+        transition: all 0.5s;
+        border-color: #00ffdd;
+        color: #00ffdd; }
+        .showcase .carousel-item-3 .btn:hover {
+          box-shadow: 0px 0px 10px #00ffdd, inset 0px 0px 10px #00ffdd;
+          text-shadow: 0px 0px 5px #00ffdd;
+          background: rgba(0, 0, 0, 0);
+          border-color: #00ffdd;
+          color: #00ffdd; }
 
 .channels {
   background: #2d132c; }
-  .channels .channels-header {
+  .channels-header {
     width: 70%;
     margin-bottom: 4rem;
     margin-left: auto;
@@ -106,24 +106,24 @@ a:hover {
     border-bottom: 1px solid #b40000; }
   .channels .card {
     background: rgba(128, 19, 54, 0.6); }
-    .channels .card .card-body {
+    .channels .card-body {
       padding: 1rem; }
-      .channels .card .card-body img {
+      .channels .card-body img {
         margin-top: -60px;
         border: 2px solid transparent;
         transition: all 0.3s; }
-      .channels .card .card-body img:hover {
-        border: 2px solid red;
-        box-shadow: 0 0 5px red; }
-      .channels .card .card-body i {
+        .channels .card-body img:hover {
+          border: 2px solid red;
+          box-shadow: 0 0 5px red; }
+      .channels .card-body i {
         color: white; }
 
 .video .card {
   background: #2d132c;
   border-radius: 0px; }
-  .video .card .card-header {
+  .video .card-header {
     background: #111; }
-  .video .card .card-body {
+  .video .card-body {
     background: #111; }
 
 .contact {
@@ -143,7 +143,7 @@ a:hover {
     border: 1px solid #b40000; }
   .contact .form-control {
     border: 1px solid #b40000; }
-  .contact .contact-text {
+  .contact-text {
     font-size: 5rem;
     color: red;
     text-shadow: 0 0 10px red; }

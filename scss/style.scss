@@ -40,18 +40,19 @@ a:hover {
         padding: 2px 0px;
         border: 2px solid rgba(255, 0, 0, 0);
         transition-duration: 1s;
-    }
-    .logo:after {
-        display: block;
+        &::after {
+            display: block;
         content: '';
         border-bottom: 2px solid $red;
         transform: scaleX(0);
         transition: transform 0.3s;
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
     }
-    .logo:hover:after {
-        transform: scaleX(1);
-    }
-    .navbar-nav {
+    
+    &-nav {
         margin-left: auto;
         li {
             margin: 0 10px;
@@ -60,95 +61,93 @@ a:hover {
                 font-size: 1rem;
                 transition-property: all;
                 transition-duration: 0.3s;
-            }
-            a:hover {
-                text-shadow: 0px 0px 5px rgb(255, 255, 255);
-                transform: scale(1.1);
+                &:hover {
+                    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+                    transform: scale(1.1);
+                }
             }
         }
     }
-
 } 
 
 // =====SHOWCASE=====
 .showcase {
-
     .carousel {
         height: 500px;
-    }
-    .carousel-caption {
-        padding: 50px 100px;
-    }
-
-    .carousel-item {
-        height: 500px;
-    }
-
-    .carousel-item-1 {
-        background: url('../img/slide1.jpg');
-        background-size: cover;
-        background-position: 50% 100%;
-
-        .slide-heading {
-            color: $red;
-            text-shadow: 0px 0px 20px $red;
+        &-caption {
+            padding: 50px 100px;
         }
-
-        .btn {
-        transition: all 0.5s;
-        }
-        .btn:hover {
-        box-shadow: 0px 0px 10px $red, inset 0px 0px 10px $red;
-        text-shadow: 0px 0px 5px $red;
-        background: $tranparent;
-        border-color: $red;
-        color: $red;
-        }
-    }
-    .carousel-item-2 {
-        background: url('../img/slide2.jpg');
-        background-size: cover;
-        background-position: 50% 100%;
+        &-item {
+            height: 500px;
+            &-1 {
+                background: url('../img/slide1.jpg');
+                background-size: cover;
+                background-position: 50% 100%;
         
-        .slide-heading {
-            color: $pink;
-            text-shadow: 0px 0px 20px $pink;
-        }
+                .slide-heading {
+                    color: $red;
+                    text-shadow: 0px 0px 20px $red;
+                }
+        
+                .btn {
+                    transition: all 0.5s;
+                    &:hover {
+                        box-shadow: 0px 0px 10px $red, inset 0px 0px 10px $red;
+                        text-shadow: 0px 0px 5px $red;
+                        background: $tranparent;
+                        border-color: $red;
+                        color: $red;
+                    }
+                }
+            }
+            &-2 {
+                background: url('../img/slide2.jpg');
+                background-size: cover;
+                background-position: 50% 100%;
+                
+                .slide-heading {
+                    color: $pink;
+                    text-shadow: 0px 0px 20px $pink;
+                }
+        
+                .btn {
+                    transition: all 0.5s;
+                    border-color: $pinkMuted;
+                    color: $pinkMuted;
+                    &:hover {
+                        box-shadow: 0px 0px 10px $pink, inset 0px 0px 10px $pink;
+                        text-shadow: 0px 0px 5px $pink;
+                        background: $tranparent;
+                        border-color: $pink;
+                        color: $pink;
 
-        .btn {
-        transition: all 0.5s;
-        border-color: $pinkMuted;
-        color: $pinkMuted;
-        }
-        .btn:hover {
-        box-shadow: 0px 0px 10px $pink, inset 0px 0px 10px $pink;
-        text-shadow: 0px 0px 5px $pink;
-        background: $tranparent;
-        border-color: $pink;
-        color: $pink;
-        }
-    }
-    .carousel-item-3 {
-        background: url('../img/slide3.jpg');
-        background-size: cover;
-        background-position: 50% 100%;
+                    }
+                }
+            }
+            &-3 {
+                background: url('../img/slide3.jpg');
+                background-size: cover;
+                background-position: 50% 100%;
+        
+                .slide-heading {
+                    color: rgb(0, 255, 221);
+                    text-shadow: 0px 0px 20px rgb(0, 255, 221);
+                }
+        
+                .btn {
+                    transition: all 0.5s;
+                    border-color: $cyan;
+                    color: $cyan;
+                    &:hover {
+                        box-shadow: 0px 0px 10px $cyan, inset 0px 0px 10px $cyan;
+                        text-shadow: 0px 0px 5px $cyan;
+                        background: $tranparent;
+                        border-color: $cyan;
+                        color: $cyan;
+                    }
 
-        .slide-heading {
-            color: rgb(0, 255, 221);
-            text-shadow: 0px 0px 20px rgb(0, 255, 221);
-        }
-
-        .btn {
-        transition: all 0.5s;
-        border-color: $cyan;
-        color: $cyan;
-        }
-        .btn:hover {
-        box-shadow: 0px 0px 10px $cyan, inset 0px 0px 10px $cyan;
-        text-shadow: 0px 0px 5px $cyan;
-        background: $tranparent;
-        border-color: $cyan;
-        color: $cyan;
+                }
+            }
         }
     }
 }
@@ -157,27 +156,26 @@ a:hover {
 
 .channels {
     background: $dark;
-    .channels-header {
+    &-header {
         width: 70%;
         margin-bottom: 4rem;
         margin-left: auto;
         margin-right: auto;
-        border-bottom: 1px solid $redMuted;
+        border-bottom: 1px solid $redMuted; 
     }
     .card {
         background: $main;
-        .card-body{
+        &-body{
             padding: 1rem;
             img {
                 margin-top: -60px;
                 border: 2px solid transparent;
                 transition: all 0.3s;
+                &:hover {
+                    border: 2px solid $red;
+                    box-shadow: 0 0 5px $red;
+                }
             }
-            img:hover {
-                border: 2px solid $red;
-                box-shadow: 0 0 5px $red;
-            }
-
             i {
                 color: $white;
             }
@@ -191,10 +189,10 @@ a:hover {
     .card {
         background: $dark;
         border-radius: 0px;
-        .card-header {
+        &-header {
             background: #111;
         }
-        .card-body {
+        &-body {
             background: #111;
         }
     }
@@ -225,7 +223,7 @@ a:hover {
         border: 1px solid $redMuted;
     }
 
-    .contact-text {
+    &-text {
         font-size: 5rem;
         color: $red;
         text-shadow: 0 0 10px $red;
